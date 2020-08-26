@@ -5,16 +5,15 @@ module Homework1 where
 --
 
 --  Convert positiveIntegers to a list of digits.
-toDigits    :: Integer -> [Integer]
+toDigits :: Integer -> [Integer]
 toDigits n
   | n <= 0 = []
   | n <= 9 = [n]
   | otherwise = toDigits (n `div` 10) <> [n `mod` 10]
 
- -- Convert positiveIntegers to a reversed list of digits.
+-- Convert positiveIntegers to a reversed list of digits.
 toDigitsRev :: Integer -> [Integer]
 toDigitsRev = reverse . toDigits
-
 
 --
 -- Exercise 2
@@ -24,7 +23,7 @@ toDigitsRev = reverse . toDigits
 doubleEveryOtherFromFront :: [Integer] -> [Integer]
 doubleEveryOtherFromFront [] = []
 doubleEveryOtherFromFront [x] = [x]
-doubleEveryOtherFromFront (x:(y:zs)) = x : 2 * y : doubleEveryOtherFromFront zs
+doubleEveryOtherFromFront (x : (y : zs)) = x : 2 * y : doubleEveryOtherFromFront zs
 
 -- Double every other integer in the list, starting from the right.
 doubleEveryOther :: [Integer] -> [Integer]
