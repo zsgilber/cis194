@@ -1,7 +1,7 @@
 module Main where
 
-import Lib
 import Homework1
+import LecturesWeek2
 
 main :: IO ()
-main = someFunc
+main = putStrLn "Starting..."
